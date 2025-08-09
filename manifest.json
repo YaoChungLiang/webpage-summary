@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Calculator",
+  "version": "1.0",
+  "description": "A clean and minimal calculator for basic arithmetic operations",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Calculator"
+  },
+  "permissions": []
+}
