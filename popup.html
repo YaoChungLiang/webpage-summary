@@ -3,41 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Webpage Summary Generator</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display">
-            <div class="expression" id="expression"></div>
-            <input type="text" id="result" readonly value="0">
+    <div class="container">
+        <div class="header">
+            <h1>📄 Summary Generator</h1>
+            <p>Generate summaries of any webpage with one click</p>
         </div>
-        <div class="buttons">
-            <button class="btn clear" data-action="clear">C</button>
-            <button class="btn clear" data-action="clear-entry">CE</button>
-            <button class="btn operator" data-action="backspace">⌫</button>
-            <button class="btn operator" data-value="/">/</button>
+        
+        <div class="content">
+            <div class="info-section">
+                <h3>How to use:</h3>
+                <ol>
+                    <li>Navigate to any webpage</li>
+                    <li>Click the "Generate Summary" button (top-right corner)</li>
+                    <li>Wait for the AI-generated summary</li>
+                    <li>Read your summary in the popup modal</li>
+                </ol>
+            </div>
             
-            <button class="btn number" data-value="7">7</button>
-            <button class="btn number" data-value="8">8</button>
-            <button class="btn number" data-value="9">9</button>
-            <button class="btn operator" data-value="*">×</button>
+            <div class="setup-section">
+                <h3>Setup Required:</h3>
+                <div class="api-key-info">
+                    <p><strong>OpenAI API Key Required</strong></p>
+                    <p>To use this extension, you need to:</p>
+                    <ol>
+                        <li>Get an API key from <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI</a></li>
+                        <li>Open the extension folder</li>
+                        <li>Edit <code>background.js</code></li>
+                        <li>Replace <code>YOUR_OPENAI_API_KEY_HERE</code> with your actual API key</li>
+                        <li>Reload the extension</li>
+                    </ol>
+                </div>
+            </div>
             
-            <button class="btn number" data-value="4">4</button>
-            <button class="btn number" data-value="5">5</button>
-            <button class="btn number" data-value="6">6</button>
-            <button class="btn operator" data-value="-">-</button>
+            <div class="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>✅ Intelligent content extraction</li>
+                    <li>✅ AI-powered summarization</li>
+                    <li>✅ Clean, modern interface</li>
+                    <li>✅ Works on any webpage</li>
+                    <li>✅ Responsive design</li>
+                </ul>
+            </div>
             
-            <button class="btn number" data-value="1">1</button>
-            <button class="btn number" data-value="2">2</button>
-            <button class="btn number" data-value="3">3</button>
-            <button class="btn operator" data-value="+">+</button>
-            
-            <button class="btn number zero" data-value="0">0</button>
-            <button class="btn number" data-value=".">.</button>
-            <button class="btn equals" data-action="calculate">=</button>
+            <div class="status">
+                <div class="status-item">
+                    <span class="status-label">Extension Status:</span>
+                    <span class="status-value" id="extension-status">Active</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">API Key:</span>
+                    <span class="status-value" id="api-status">Not Configured</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Made with ❤️ for better web browsing</p>
         </div>
     </div>
+    
     <script src="popup.js"></script>
 </body>
 </html>
